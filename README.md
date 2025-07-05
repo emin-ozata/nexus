@@ -33,5 +33,9 @@ Getting Nexus up and running is a breeze with Docker:
 
         docker run --rm -i -t -p 3000:80 nexus
 
+3.  **Or Just Pull and Run:**
+
+        docker run --rm -i -t -p 3000:80 eminozataa/nexus
+
 
 Once those commands are done, just open your browser and head to `http://localhost:3000`. The app will pop right up, ready for you to visualize your JSON data!
