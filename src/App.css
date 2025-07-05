@@ -1,0 +1,247 @@
+/* App.css */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'JetBrains Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.json-panel {
+    flex: 0 0 35%;
+    min-width: 320px;
+    max-width: 50%;
+    background-color: #161b22;
+    border-right: 1px solid #30363d;
+}
+
+.error-panel {
+    padding: 12px;
+    background-color: #4d1f22;
+    color: #ffb3b8;
+    font-size: 13px;
+    border-top: 1px solid #30363d;
+}
+
+.flow-panel {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.custom-node {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    min-width: 250px;
+    max-width: 350px;
+    font-size: 13px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.custom-node.root {
+    border-color: #8b949e;
+    border-width: 2px;
+}
+
+.custom-node.array {
+    border-color: #bc8cff;
+    border-left: 4px solid #bc8cff;
+}
+
+.custom-node.object {
+    border-color: #ffa657;
+    border-left: 4px solid #ffa657;
+}
+
+.node-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #21262d;
+    border-bottom: 1px solid #30363d;
+    border-radius: 7px 7px 0 0;
+    min-height: 45px;
+}
+
+.custom-node.primitive .node-header {
+    border-bottom: none;
+    border-radius: 7px;
+}
+
+.node-title {
+    font-weight: 600;
+    color: #e6edf3;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.node-badge {
+    background: #30363d;
+    color: #7d8590;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.node-content {
+    padding: 12px 16px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.node-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    min-height: 28px;
+    border-bottom: 1px solid #30363d40;
+}
+
+.node-field:last-child {
+    border-bottom: none;
+}
+
+.node-field .react-flow__handle {
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+}
+
+.field-key {
+    color: #7d8590;
+    font-weight: 500;
+    margin-right: 12px;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+.field-value {
+    color: #e6edf3;
+    text-align: right;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    font-size: 12px;
+    flex-shrink: 1;
+}
+
+.field-value.string {
+    color: #a5d6ff;
+}
+
+.field-value.number {
+    color: #79c0ff;
+}
+
+.field-value.boolean {
+    color: #ff7b72;
+}
+
+.field-value.array {
+    color: #d2a8ff;
+}
+
+.field-value.object {
+    color: #ffa657;
+}
+
+.react-flow__handle {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.react-flow__handle:hover {
+    opacity: 1;
+}
+
+.react-flow__handle-left {
+    right: -12px !important;
+}
+
+.react-flow__handle-right {
+    right: -12px !important;
+}
+
+.react-flow__edge-path {
+    stroke-width: 2;
+}
+
+.node-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.node-content::-webkit-scrollbar-track {
+    background: #21262d;
+}
+
+.node-content::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 2px;
+}
+
+.node-content::-webkit-scrollbar-thumb:hover {
+    background: #484f58;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .json-panel {
+        flex: 0 0 40%;
+        max-width: none;
+        min-width: 0;
+        border-right: none;
+        border-bottom: 1px solid #30363d;
+    }
+}
+
+.react-flow__controls {
+    background-color: #161b22;
+    /* Dark background */
+    border: none;
+    box-shadow: 0 0 0 1px #30363d;
+}
+
+.react-flow__controls-button {
+    background-color: transparent;
+    color: #e6edf3;
+    /* Light icon color */
+    border: none;
+}
+
+.react-flow__controls-button:hover {
+    background-color: #21262d;
+}
