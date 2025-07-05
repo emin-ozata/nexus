@@ -19,6 +19,9 @@ Cool Features
 
 *   **Error Catcher:** If you accidentally paste some bad JSON, Nexus will spot it and let you know. Handy, right?
 
+Screenshot
+-------------
+![Nexus JSON Visualizer Screenshot](docs/images/nexus.png)
 
 How to Get Started
 ------------------
